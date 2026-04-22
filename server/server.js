@@ -287,7 +287,7 @@ app.get('/api/bookings/:userId', async (req, res) => {
 });
 
 // ========== 404 HANDLER ==========
-app.use('*', (req, res) => {
+app.use((req, res) => {
   res.status(404).json({
     success: false,
     error: 'Route not found',
