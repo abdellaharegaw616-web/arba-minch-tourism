@@ -1,0 +1,478 @@
+/* Live Tracking Styles */
+.live-tracking {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%);
+  padding: 20px;
+  position: relative;
+}
+
+.tracking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.tracking-header h2 {
+  font-size: 2rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.tracking-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ef4444;
+  animation: pulse 2s infinite;
+}
+
+.status-dot.active {
+  background: #10b981;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Map Container */
+.map-container {
+  width: 100%;
+  height: 400px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Loading State */
+.loading-map {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.loading-spinner {
+  font-size: 1.5rem;
+  color: #6b7280;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Map Info Window */
+.map-info-window {
+  padding: 8px;
+  max-width: 200px;
+}
+
+.map-info-window h4 {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.map-info-window p {
+  margin: 0 0 4px 0;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.map-info-window strong {
+  color: #10b981;
+}
+
+/* Safety Panel */
+.safety-panel {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.safety-panel h3 {
+  margin: 0 0 20px 0;
+  font-size: 1.5rem;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sos-button {
+  width: 100%;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+}
+
+.sos-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+}
+
+.location-button {
+  width: 100%;
+  background: #e5e7eb;
+  color: #374151;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.location-button.active {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+}
+
+.location-button:hover:not(.active) {
+  background: #d1d5db;
+}
+
+.eta-info {
+  background: #f3f4f6;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: #374151;
+  text-align: center;
+}
+
+.eta-info strong {
+  color: #10b981;
+  font-size: 1.1rem;
+}
+
+.emergency-contacts {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.contact-item strong {
+  color: #1f2937;
+}
+
+/* Tracking History */
+.tracking-history {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tracking-history h4 {
+  margin: 0 0 15px 0;
+  font-size: 1.2rem;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: #f9fafb;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+.history-time {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.history-coords {
+  color: #374151;
+  font-family: monospace;
+}
+
+/* Emergency Modal */
+.emergency-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.emergency-content {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 500px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.emergency-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  animation: emergencyPulse 1s infinite;
+}
+
+@keyframes emergencyPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.emergency-content h2 {
+  color: #dc2626;
+  font-size: 2rem;
+  margin: 0 0 15px 0;
+  font-weight: bold;
+}
+
+.emergency-content p {
+  color: #6b7280;
+  margin: 0 0 20px 0;
+  line-height: 1.6;
+}
+
+.emergency-details {
+  background: #f9fafb;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.emergency-details div {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.emergency-details strong {
+  color: #1f2937;
+}
+
+.emergency-ok {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.emergency-ok:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .live-tracking {
+    padding: 15px;
+  }
+
+  .tracking-header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .tracking-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .map-container {
+    height: 300px;
+  }
+
+  .marker-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+  }
+
+  .safety-panel {
+    padding: 20px;
+  }
+
+  .sos-button {
+    padding: 12px;
+    font-size: 1.1rem;
+  }
+
+  .emergency-content {
+    padding: 30px 20px;
+  }
+
+  .emergency-content h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Dark mode support */
+.dark .live-tracking {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.dark .safety-panel,
+.dark .tracking-history {
+  background: rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .safety-panel h3,
+.dark .tracking-history h4 {
+  color: white;
+}
+
+.dark .location-button:not(.active) {
+  background: #374151;
+  color: #d1d5db;
+}
+
+.dark .location-button:hover:not(.active) {
+  background: #4b5563;
+}
+
+.dark .eta-info {
+  background: #374151;
+  color: #d1d5db;
+}
+
+.dark .history-item {
+  background: #374151;
+  color: #d1d5db;
+}
+
+.dark .emergency-content {
+  background: #1f2937;
+}
+
+.dark .emergency-details {
+  background: #374151;
+}
+
+.dark .emergency-details div {
+  color: #d1d5db;
+}
+
+.dark .emergency-details strong {
+  color: white;
+}
+
+/* Loading animation */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.loading::after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s linear infinite;
+  margin-left: 15px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Accessibility */
+.sos-button:focus,
+.location-button:focus,
+.emergency-ok:focus {
+  outline: 3px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .marker-icon,
+  .status-dot,
+  .emergency-icon {
+    animation: none;
+  }
+
+  .sos-button,
+  .location-button,
+  .emergency-ok {
+    transition: none;
+  }
+}
