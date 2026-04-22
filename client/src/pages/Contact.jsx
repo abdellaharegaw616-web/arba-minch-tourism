@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Facebook, Instagram, Twitter } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -51,8 +50,8 @@ const Contact = () => {
 
             {/* Email */}
             <div className="flex items-start space-x-4 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-              <div className="bg-green-100 dark:bg-green-900 p-3 rounded-full">
-                <Mail className="w-6 h-6 text-green-600 dark:text-green-400" />
+              <div className="bg-green-100 dark:bg-green-900 p-3 rounded-full text-2xl">
+                📧
               </div>
               <div>
                 <h3 className="font-semibold text-gray-800 dark:text-white">Email</h3>
@@ -65,8 +64,8 @@ const Contact = () => {
 
             {/* Phone */}
             <div className="flex items-start space-x-4 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-              <div className="bg-green-100 dark:bg-green-900 p-3 rounded-full">
-                <Phone className="w-6 h-6 text-green-600 dark:text-green-400" />
+              <div className="bg-green-100 dark:bg-green-900 p-3 rounded-full text-2xl">
+                📞
               </div>
               <div>
                 <h3 className="font-semibold text-gray-800 dark:text-white">Phone</h3>
@@ -79,8 +78,8 @@ const Contact = () => {
 
             {/* Location */}
             <div className="flex items-start space-x-4 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-              <div className="bg-green-100 dark:bg-green-900 p-3 rounded-full">
-                <MapPin className="w-6 h-6 text-green-600 dark:text-green-400" />
+              <div className="bg-green-100 dark:bg-green-900 p-3 rounded-full text-2xl">
+                📍
               </div>
               <div>
                 <h3 className="font-semibold text-gray-800 dark:text-white">Location</h3>
@@ -99,14 +98,14 @@ const Contact = () => {
                 Follow Us
               </h3>
               <div className="flex space-x-4">
-                <a href="#" className="bg-blue-600 p-3 rounded-full text-white hover:bg-blue-700 transition">
-                  <Facebook className="w-5 h-5" />
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="bg-blue-600 p-3 rounded-full text-white hover:bg-blue-700 transition text-xl">
+                  📘
                 </a>
-                <a href="#" className="bg-pink-600 p-3 rounded-full text-white hover:bg-pink-700 transition">
-                  <Instagram className="w-5 h-5" />
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="bg-pink-600 p-3 rounded-full text-white hover:bg-pink-700 transition text-xl">
+                  📷
                 </a>
-                <a href="#" className="bg-blue-400 p-3 rounded-full text-white hover:bg-blue-500 transition">
-                  <Twitter className="w-5 h-5" />
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="bg-blue-400 p-3 rounded-full text-white hover:bg-blue-500 transition text-xl">
+                  🐦
                 </a>
               </div>
             </div>
@@ -193,7 +192,7 @@ const Contact = () => {
                   type="submit"
                   className="w-full bg-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-700 transition flex items-center justify-center space-x-2"
                 >
-                  <Send className="w-5 h-5" />
+                  <span>📤</span>
                   <span>Send Message</span>
                 </button>
               </form>
