@@ -11,6 +11,7 @@ import Translator from './pages/Translator';
 import Admin from './pages/Admin';
 import ForgotPassword from './pages/ForgotPassword';
 import ResetPassword from './pages/ResetPassword';
+import Contact from './pages/Contact';
 import Services from './components/Services';
 import ArbaMinchGallery from './components/ArbaMinchGallery';
 import AIItinerary from './components/AIItinerary';
@@ -39,6 +40,7 @@ function App() {
             <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="/reset-password/:token" element={<ResetPassword />} />
             <Route path="/ai-itinerary" element={<AIItinerary />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </Router>
       </ThemeProvider>

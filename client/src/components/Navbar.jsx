@@ -47,6 +47,9 @@ const Navbar = () => {
             <Link to="/translator" className={`${
               darkMode ? 'text-gray-300 hover:text-green-400' : 'text-gray-700 hover:text-green-600'
             } transition`}>Chat</Link>
+            <Link to="/contact" className={`${
+              darkMode ? 'text-gray-300 hover:text-green-400' : 'text-gray-700 hover:text-green-600'
+            } transition`}>Contact</Link>
           </div>
 
           {/* Search Bar - Desktop */}
@@ -135,6 +138,9 @@ const Navbar = () => {
               <Link to="/translator" className={`${
                 darkMode ? 'text-gray-300 hover:text-green-400' : 'text-gray-700 hover:text-green-600'
               } transition`}>Chat</Link>
+              <Link to="/contact" className={`${
+                darkMode ? 'text-gray-300 hover:text-green-400' : 'text-gray-700 hover:text-green-600'
+              } transition`}>Contact</Link>
               
               {isAuthenticated ? (
                 <>
