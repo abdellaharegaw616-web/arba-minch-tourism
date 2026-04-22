@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import Testimonials from '../components/Testimonials';
 
 const Home = () => {
   const { user, isAuthenticated } = useAuth();
@@ -483,6 +484,9 @@ const Home = () => {
         .animation-delay-400 { animation-delay: 0.4s; }
         .animation-delay-600 { animation-delay: 0.6s; }
       `}</style>
+      
+      {/* Testimonials Section */}
+      <Testimonials />
     </div>
   );
 };
