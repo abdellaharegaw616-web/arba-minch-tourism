@@ -12,6 +12,7 @@ import Admin from './pages/Admin';
 import ForgotPassword from './pages/ForgotPassword';
 import ResetPassword from './pages/ResetPassword';
 import Contact from './pages/Contact';
+import Gallery from './pages/Gallery';
 import Services from './components/Services';
 import ArbaMinchGallery from './components/ArbaMinchGallery';
 import AIItinerary from './components/AIItinerary';
@@ -28,7 +29,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/gallery" element={<ArbaMinchGallery />} />
+            <Route path="/gallery" element={<Gallery />} />
             <Route path="/3d-gallery" element={<ThreeDGallery />} />
             <Route path="/virtual-tour" element={<VirtualTour />} />
             <Route path="/live-tracking" element={<LiveTracking />} />
