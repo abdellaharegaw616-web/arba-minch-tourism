@@ -14,9 +14,15 @@ const app = express();
 app.use(cors({
   origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
   credentials: true
 }));
+
+// Request logging for debugging
+app.use((req, res, next) => {
+  console.log(`${new Date().toISOString()} - ${req.method} ${req.path} - Origin: ${req.headers.origin || 'unknown'}`);
+  next();
+});
 
 // Middleware
 app.use(express.json());
@@ -61,13 +67,18 @@ app.get('/api/test', (req, res) => {
   });
 });
 
+// Handle preflight requests
+app.options('*', cors());
+
 // ========== AUTH ROUTES ==========
 app.post('/api/auth/register', async (req, res) => {
+  console.log('Register attempt:', req.body);
   try {
     const { name, email, password } = req.body;
 
     // Validation
     if (!name || !email || !password) {
+      console.log('Validation failed - missing fields');
       return res.status(400).json({
         success: false,
         error: 'Please provide name, email and password'
