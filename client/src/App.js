@@ -14,7 +14,6 @@ import ResetPassword from './pages/ResetPassword';
 import Contact from './pages/Contact';
 import Gallery from './pages/Gallery';
 import Services from './components/Services';
-import ArbaMinchGallery from './components/ArbaMinchGallery';
 import AIItinerary from './components/AIItinerary';
 import ThreeDGallery from './components/ThreeDGallery';
 import VirtualTour from './components/VirtualTour';
