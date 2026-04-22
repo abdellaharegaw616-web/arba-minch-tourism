@@ -1,47 +1,192 @@
 import React, { useState } from 'react';
 
 const galleryImages = [
+  // LAKES (6 images)
   {
     id: 1,
     src: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800',
-    title: 'Lake Chamo',
+    title: 'Lake Chamo Sunset',
     category: 'Lakes',
-    description: 'Beautiful lake with hippos and crocodiles'
+    description: 'Famous for hippos and giant crocodiles'
   },
   {
     id: 2,
-    src: 'https://images.unsplash.com/photo-1549366021-9f761d450615?w=800',
-    title: 'Nech Sar National Park',
-    category: 'Parks',
-    description: 'Wildlife sanctuary with diverse animals'
+    src: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800',
+    title: 'Lake Abaya - The Red Lake',
+    category: 'Lakes',
+    description: 'Known for its distinctive red color'
   },
   {
     id: 3,
-    src: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800',
-    title: 'Bridge of God',
-    category: 'Landmarks',
-    description: '40 Springs connecting two lakes'
+    src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800',
+    title: 'Twin Lakes Viewpoint',
+    category: 'Lakes',
+    description: 'Panoramic view of Lake Abaya and Lake Chamo'
   },
   {
     id: 4,
-    src: 'https://images.unsplash.com/photo-1518495973542-7f76cff24f15?w=800',
-    title: 'Dorze Village',
-    category: 'Culture',
-    description: 'Traditional bamboo houses'
+    src: 'https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=800',
+    title: 'Lake Chamo Boat Tour',
+    category: 'Lakes',
+    description: 'Traditional boat rides for wildlife viewing'
   },
   {
     id: 5,
-    src: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800',
-    title: 'Lake Abaya',
+    src: 'https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?w=800',
+    title: 'Lake Abaya Morning Mist',
     category: 'Lakes',
-    description: 'Red lake with stunning views'
+    description: 'Beautiful morning atmosphere'
   },
   {
     id: 6,
+    src: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800',
+    title: 'Bridge of God',
+    category: 'Lakes',
+    description: 'Natural land bridge between the two lakes'
+  },
+  // PARKS & WILDLIFE (6 images)
+  {
+    id: 7,
+    src: 'https://images.unsplash.com/photo-1549366021-9f761d450615?w=800',
+    title: 'Nech Sar National Park',
+    category: 'Parks',
+    description: 'Home to zebras, gazelles and antelopes'
+  },
+  {
+    id: 8,
+    src: 'https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=800',
+    title: 'Crocodile Market',
+    category: 'Parks',
+    description: 'Hundreds of crocodiles gather here'
+  },
+  {
+    id: 9,
+    src: 'https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800',
+    title: 'Hippo Pool',
+    category: 'Parks',
+    description: 'Watch hippos in their natural habitat'
+  },
+  {
+    id: 10,
+    src: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800',
+    title: 'Swayne\'s Hartebeest',
+    category: 'Parks',
+    description: 'Endemic antelope species'
+  },
+  {
+    id: 11,
+    src: 'https://images.unsplash.com/photo-1474511320723-9a56873571b7?w=800',
+    title: 'Burchell\'s Zebras',
+    category: 'Parks',
+    description: 'Large herds roam the park'
+  },
+  {
+    id: 12,
+    src: 'https://images.unsplash.com/photo-1456926631375-92c8ce872def?w=800',
+    title: 'Nech Sar Savannah',
+    category: 'Parks',
+    description: 'Vast grasslands and acacia trees'
+  },
+  // LANDMARKS (5 images)
+  {
+    id: 13,
+    src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800',
+    title: 'Forty Springs (Arba Minch)',
+    category: 'Landmarks',
+    description: 'The town\'s namesake - 40 natural springs'
+  },
+  {
+    id: 14,
+    src: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800',
+    title: 'Abaya-Chamo Viewpoint',
+    category: 'Landmarks',
+    description: 'Best spot for panoramic photos'
+  },
+  {
+    id: 15,
+    src: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=800',
+    title: 'Kulfo River',
+    category: 'Landmarks',
+    description: 'Flows between the two lakes'
+  },
+  {
+    id: 16,
+    src: 'https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=800',
+    title: 'Arba Minch Town View',
+    category: 'Landmarks',
+    description: 'The town above the lakes'
+  },
+  {
+    id: 17,
+    src: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800',
+    title: 'Abaya Mountains',
+    category: 'Landmarks',
+    description: 'Scenic mountain backdrop'
+  },
+  // CULTURE (4 images)
+  {
+    id: 18,
+    src: 'https://images.unsplash.com/photo-1518495973542-7f76cff24f15?w=800',
+    title: 'Dorze Village',
+    category: 'Culture',
+    description: 'Famous for elephant-shaped bamboo houses'
+  },
+  {
+    id: 19,
+    src: 'https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=800',
+    title: 'Traditional Weaving',
+    category: 'Culture',
+    description: 'Dorze people are expert weavers'
+  },
+  {
+    id: 20,
+    src: 'https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=800',
+    title: 'Ethiopian Coffee Ceremony',
+    category: 'Culture',
+    description: 'Traditional coffee ritual'
+  },
+  {
+    id: 21,
+    src: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800',
+    title: 'Local Market Day',
+    category: 'Culture',
+    description: 'Colorful markets in Chencha'
+  },
+  // NATURE (5 images)
+  {
+    id: 22,
     src: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800',
-    title: 'Arba Minch Forest',
+    title: 'Ground Water Forest',
     category: 'Nature',
-    description: 'Lush green forest reserve'
+    description: 'Unique forest between the lakes'
+  },
+  {
+    id: 23,
+    src: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800',
+    title: 'Forest Canopy',
+    category: 'Nature',
+    description: 'Dense indigenous forest'
+  },
+  {
+    id: 24,
+    src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800',
+    title: 'Waterfall Trail',
+    category: 'Nature',
+    description: 'Scenic hiking routes'
+  },
+  {
+    id: 25,
+    src: 'https://images.unsplash.com/photo-1500829243541-74b677fecc30?w=800',
+    title: 'Wildflowers',
+    category: 'Nature',
+    description: 'Native flora of the region'
+  },
+  {
+    id: 26,
+    src: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800',
+    title: 'Sunset over Mountains',
+    category: 'Nature',
+    description: 'Dramatic evening skies'
   }
 ];
 
