@@ -67,9 +67,6 @@ app.get('/api/test', (req, res) => {
   });
 });
 
-// Handle preflight requests
-app.options('*', cors());
-
 // ========== AUTH ROUTES ==========
 app.post('/api/auth/register', async (req, res) => {
   console.log('Register attempt:', req.body);
